@@ -1,11 +1,13 @@
-
+import First from "./first"
 
 function App() {
 
   return (
     <>
-    <h1>Chai or React with Vite || Ritik Shroff</h1>
+      <First />
+      <h1>Chai or React with Vite || Ritik Shroff</h1>
     </>
+
   )
 }
 
