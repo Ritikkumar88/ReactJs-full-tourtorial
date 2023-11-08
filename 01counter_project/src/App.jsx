@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -15,15 +13,23 @@ function App() {
   // function for onclick button on add counter
   const addValue = () => {
     console.log("clicked" , counter);
-    counter = counter+1;
-    setCounter(counter)
+    if(counter < 20 && counter >= 0){
+      counter = counter+1;
+      setCounter(counter)
+    }else{
+      document.write("The value is exceding")
+    }
   }
 
   // function for onclick button on remove counter
   const removeValue = () => {
     console.log("removebtn Clicked" , counter);
+    if(counter > 1 && counter <=20 ){
     counter= counter-1;
     setCounter(counter);
+    }else{
+      document.write("It cannot be less then 0")
+    }
   }
 
 
