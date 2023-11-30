@@ -3,7 +3,7 @@ import './App.css'
 import Cards from './Components/cards'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   // declairing object for props;
   let myObj = {

@@ -7,6 +7,8 @@ import Card from './components/Card'
 import { useState } from 'react'
 
 function App() {
+
+  // step-6****** defining the context parameters again make sure the name is same;
   const [themeMode, setthemeMode] = useState("light")
 
   const lightTheme = () => {
@@ -18,6 +20,7 @@ function App() {
   }
 
   // actual change in theme;
+  // step-7 *****useeffect --> not related to context
 
   useEffect(() => {
     document.querySelector('html').classList.remove("light" , "dark")
@@ -34,8 +37,6 @@ function App() {
         </div>
 
         <div className="w-full max-w-sm mx-auto">
-          <Card/>
-          <Card/>
           <Card/>
         </div>
       </div>

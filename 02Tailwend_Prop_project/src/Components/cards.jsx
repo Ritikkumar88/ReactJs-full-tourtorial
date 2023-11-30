@@ -27,7 +27,7 @@ function cards({username, player_name= "vvrat"}) {
             stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
-            strokeLinecap="round"
+            StrokeLinecap="round"
             className="ml-2 h-4 w-4"
           >
             <line x1="7" y1="17" x2="17" y2="7"></line>
