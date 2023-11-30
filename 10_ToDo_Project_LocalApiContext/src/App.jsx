@@ -7,6 +7,7 @@ import TodoItem from './components/ToDoItem'
 function App() {
   const [todos , setTodos] = useState([])
 
+  // functionality************
   const addtodo = (todo) => {
     setTodos((prev) => [{id: Date.now() , ...todo}, ...prev])
   }
@@ -23,10 +24,12 @@ function App() {
     setTodos((prev) => prev.map((prevtodo) => prevtodo === id? {...prevtodo , completed: !prevtodo.completed} : prevtodo))
   }
 
+
+  // loacl storage********************
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos"))
 
-    if (todos && todos.lennght > 0){
+    if (todos && todos.length > 0){
      setTodos(todos)
     }
   }, [])

@@ -1,6 +1,7 @@
 import {createContext , useContext} from "react"
 
 export const toDoContext = createContext({
+    // propwrty*********
     todos: [
         {
             id: 1,
@@ -8,6 +9,7 @@ export const toDoContext = createContext({
             completed: false,
         } 
     ],
+    // functionalotys******
     addtodo: (todo) => {},
     updateTodo: (id, todo) => {},
     deleteTodo: (id) => {},

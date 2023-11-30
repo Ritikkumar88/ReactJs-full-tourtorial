@@ -32,7 +32,7 @@ function TodoItem({ todo }) {
           } ${todo.completed ? "line-through" : ""}`}
         value={todoMsg}
         onChange={(e) => setTodoMsg(e.target.value)}
-        readOnly={!isTodoEditable}
+        readOnly={!istodoEditable}
       />
       {/* Edit, Save Button */}
       <button
@@ -40,13 +40,13 @@ function TodoItem({ todo }) {
         onClick={() => {
           if (todo.completed) return;
 
-          if (isTodoEditable) {
+          if (istodoEditable) {
             editTodo();
           } else setistodoEditable((prev) => !prev);
         }}
         disabled={todo.completed}
       >
-        {isTodoEditable ? "📁" : "✏️"}
+        {istodoEditable ? "📁" : "✏️"}
       </button>
       {/* Delete Todo Button */}
       <button
