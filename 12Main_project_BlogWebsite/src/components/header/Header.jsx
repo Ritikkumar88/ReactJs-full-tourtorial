@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Logo, LogOutBtn } from '../index'
-import { Link, Navigate } from 'react-router-dom'
-import { useSelector, UseSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 
