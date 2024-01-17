@@ -1,5 +1,5 @@
 import conf from "../conf/conf";
-import { Client, Account, ID, Databases, Storage, Query } from "appwrite";
+import { Client, ID, Databases, Storage, Query } from "appwrite";
 
 
 export class Service {
@@ -126,11 +126,10 @@ export class Service {
             conf.appwriteBucketId,
             fileId,
         )
-
     }
 
 }
 
 // object
 const service = new Service()
-export default Service;
+export default service;

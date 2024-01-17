@@ -7,11 +7,10 @@ function App() {
 
   return (
     <>
-    <UserContextProvider>
-      <h1>API Context in React</h1>
-      <Login/>
-      <Profile/>
-      
+      <UserContextProvider>
+        <h1>API Context in React</h1>
+        <Login />
+        <Profile />
       </UserContextProvider>
     </>
   )

@@ -8,6 +8,7 @@ function Login(){
     const [userName , setusername] = useState('')
     const [password , Setpassword] = useState('')
 
+    // usecontext syntext;
     const {setUser} = useContext(UserContext)
 
     const handleSubmit = (e) => {
@@ -23,6 +24,8 @@ function Login(){
                 setusername(e.target.value)
             }}
             placeholder="UserName" />
+
+            {" "}
 
             <input type="password" 
             value={password}
