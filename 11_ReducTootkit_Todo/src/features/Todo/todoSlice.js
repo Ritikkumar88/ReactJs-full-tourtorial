@@ -13,7 +13,7 @@ function sayHello(state, action){    // in parameter we will always get two thin
         id: nanoid(),
         text: action.payload,
     }
-    state.todos.push(newTodo)
+    state.todos.push(todo)
 }
 
 // step-5
@@ -25,8 +25,7 @@ export const todoSlice = createSlice({
         addTodo : sayHello,   // step-6 used
         removeTodo: (state , action) => {     // function defined
             state.todos = state.todos.filter((todo) => {todo.id !== action.payload})
-        }  , 
-
+        },
     }
 })
 

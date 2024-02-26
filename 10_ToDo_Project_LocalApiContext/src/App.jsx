@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { Todoprovider } from './context'
+import { TodoProvider } from './context'
 import TodoForm from './components/ToDoForm'
 import TodoItem from './components/ToDoItem'
 
@@ -13,7 +13,7 @@ function App() {
   }
 
   const updateTodo = (id , todo) =>{
-    setTodos((prev) => prev.map((prevtodo) => (prevtodo.id === id ? todo : prevtodo)))
+    setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? todo : prevTodo)))
   } 
 
   const deleteTodo = (id) => {
@@ -21,7 +21,7 @@ function App() {
   }
 
   const toggleComplete = (id) => {
-    setTodos((prev) => prev.map((prevtodo) => prevtodo === id? {...prevtodo , completed: !prevtodo.completed} : prevtodo))
+    setTodos((prev) => prev.map((prevtodo) => prevtodo.id === id? {...prevtodo , completed: !prevtodo.completed} : prevtodo))
   }
 
 
@@ -41,7 +41,7 @@ function App() {
   
 
   return (
-    <Todoprovider value={{todos, addtodo, updateTodo, deleteTodo, toggleComplete}}>
+    <TodoProvider value={{todos, addtodo, updateTodo, deleteTodo, toggleComplete}}>
 
       <div className="bg-[#172842] min-h-screen py-8">
                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
@@ -52,15 +52,15 @@ function App() {
                     </div>
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
-                        {todos.map((todo) => {
+                        {todos.map((todo) => (
                           <div key={todo.id} className='w-full'>
                             <TodoItem todo={todo}/>
                           </div>
-                        })}
+                        ))}
                     </div>
                 </div>
             </div>
-    </Todoprovider>
+    </TodoProvider>
   )
 }
 
